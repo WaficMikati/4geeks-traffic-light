@@ -1,0 +1,72 @@
+#traffic-light {
+  background-image: url('./assets/bg.png');
+}
+
+#traffic-light,
+.container {
+  width: 1920px;
+  height: 1080px;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+.container,
+.light {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.light {
+  cursor: pointer;
+  aspect-ratio: 1 / 1;
+  position: relative;
+  border-radius: 100%;
+}
+
+#red {
+  width: 170px;
+  bottom: 280px;
+  left: 900px;
+}
+
+#red:hover ~ .container.red {
+  background-image: url('/src/assets/redHover.png');
+}
+
+#red.active ~ .container.red {
+  background-image: url('/src/assets/redActive.png');
+}
+
+#red.purple.active ~ .container.red {
+  background-image: url('/src/assets/purpleActive.png');
+}
+
+#yellow {
+  width: 190px;
+  bottom: 45px;
+  left: 880px;
+}
+
+#yellow:hover ~ .container.yellow {
+  background-image: url('/src/assets/yellowHover.png');
+}
+
+#yellow.active ~ .container.yellow {
+  background-image: url('/src/assets/yellowActive.png');
+}
+
+#green {
+  width: 210px;
+  top: 210px;
+  left: 880px;
+}
+
+#green:hover ~ .container.green {
+  background-image: url('/src/assets/greenHover.png');
+}
+
+#green.active ~ .container.green {
+  background-image: url('/src/assets/greenActive.png');
+}
+
